@@ -27,7 +27,11 @@
 # 13 bright magenta
 # 14 bright cyan
 # 15 bright white
-#
+# 124 deep blood red
+# 126 deep reddish-violet
+# 92 deep violet
+# 208 burned orange
+# 226 yellow-green
 
 # Load dependencies.
 pmodload 'helper'
@@ -130,9 +134,9 @@ function prompt_sorin_setup {
 
   # Set editor-info parameters.
   zstyle ':prezto:module:editor:info:completing' format '%B%F{7}...%f%b'
-  zstyle ':prezto:module:editor:info:keymap:primary' format ' %B%F{1}❯%F{3}❯%F{2}❯%f%b'
-  zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format ' %F{3}♺%f'
-  zstyle ':prezto:module:editor:info:keymap:alternate' format ' %B%F{2}❮%F{3}❮%F{1}❮%f%b'
+  zstyle ':prezto:module:editor:info:keymap:primary' format ' %B%F{124}❯%F{126}❯%F{92}❯%f%b'
+  zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format ' %F{124}♺%f'
+  zstyle ':prezto:module:editor:info:keymap:alternate' format ' %B%F{92}❮%F{126}❮%F{124}❮%f%b'
 
   # Set git-info parameters.
   zstyle ':prezto:module:git:info' verbose 'yes'
@@ -140,10 +144,10 @@ function prompt_sorin_setup {
   zstyle ':prezto:module:git:info:added' format ' %%B%F{2}✚%f%%b'
   zstyle ':prezto:module:git:info:ahead' format ' %%B%F{13}⬆%f%%b'
   zstyle ':prezto:module:git:info:behind' format ' %%B%F{13}⬇%f%%b'
-  zstyle ':prezto:module:git:info:branch' format ' %%B%F{2}%b%f%%b'
+  zstyle ':prezto:module:git:info:branch' format ' %%B%F{208}%b%f%%b'
   zstyle ':prezto:module:git:info:commit' format ' %%B%F{3}%.7c%f%%b'
   zstyle ':prezto:module:git:info:deleted' format ' %%B%F{1}✖%f%%b'
-  zstyle ':prezto:module:git:info:modified' format ' %%B%F{4}✱%f%%b'
+  zstyle ':prezto:module:git:info:modified' format ' %%B%F{226}✱%f%%b'
   zstyle ':prezto:module:git:info:position' format ' %%B%F{13}%p%f%%b'
   zstyle ':prezto:module:git:info:renamed' format ' %%B%F{5}➜%f%%b'
   zstyle ':prezto:module:git:info:stashed' format ' %%B%F{6}✭%f%%b'
@@ -169,7 +173,7 @@ function prompt_sorin_setup {
   _prompt_sorin_pwd=''
 
   # Define prompts.
-  PROMPT='${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{4}${_prompt_sorin_pwd}%(!. %B%F{1}#%f%b.)${editor_info[keymap]} '
+  PROMPT='${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{226}${_prompt_sorin_pwd}%(!. %B%F{1}#%f%b.)${editor_info[keymap]} '
   RPROMPT='$python_info[virtualenv]${editor_info[overwrite]}%(?:: %F{1}'
   RPROMPT+=${show_return}
   RPROMPT+='%f)${VIM:+" %B%F{6}V%f%b"}${_prompt_sorin_git}'
