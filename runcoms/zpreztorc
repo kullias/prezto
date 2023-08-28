@@ -41,9 +41,9 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'fasd' \
   'history-substring-search' \
+  'prompt' \
   'git' \
-  'docker' \
-  'prompt'
+  'docker'
 
 #
 # Autosuggestions
