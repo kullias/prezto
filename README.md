@@ -48,7 +48,7 @@ version is **4.3.11**.
     </details>
 
 03. Create a new Zsh configuration by copying/linking the Zsh configuration
-    files provided:
+    files provided **and run this in the terminal**:
 
     ```console
     setopt EXTENDED_GLOB
@@ -57,8 +57,10 @@ version is **4.3.11**.
     done
     ```
 
-    **Note:** If you already have any of the given configuration files, `ln` in
-    the above operation will cause an error. In simple cases, you can load
+    **Note for me:** If you already have any of the given configuration files, `ln` in
+    the above operation will cause an error. Just remove them and repeat.
+    
+    **Note from the author:** In simple cases, you can load
     Prezto by adding the line `source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"` to
     the bottom of your _`${ZDOTDIR:-$HOME}/.zshrc`_ and keep the rest of your
     Zsh configuration intact. For more complicated setups, we recommend that you
@@ -71,7 +73,7 @@ version is **4.3.11**.
     chsh -s /bin/zsh
     ```
 
-05. Open a new Zsh terminal window or tab.
+05. Open a new Zsh terminal window or tab. You might need to restart Ubuntu.
 
 ### [Fig](https://fig.io)
 
